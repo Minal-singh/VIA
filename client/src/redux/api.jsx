@@ -21,6 +21,12 @@ export const api = createApi({
       }),
     }),
 
+    verifyUser: builder.query({
+      query: ({confirmationCode}) => ({
+        url: `users/confirm/${confirmationCode}`,
+      }),
+    }),
+
     getUsers: builder.query({
       query: () => ({
         url: "users/get-users",
@@ -103,6 +109,7 @@ export const {
   useSigninMutation,
   useSignupMutation,
   useGetUsersQuery,
+  useVerifyUserQuery,
   useCreateRoomMutation,
   useDeleteRoomMutation,
   useEditRoomMutation,

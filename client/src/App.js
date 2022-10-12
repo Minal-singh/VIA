@@ -8,6 +8,7 @@ import Auth from "./Pages/AuthPage/Auth";
 import ChatPage from "./Pages/ChatPage/ChatPage";
 import Room from "./components/Room/Room";
 import NoChatSelected from "./components/Room/NoChatSelected";
+import VerifyEmail from "./components/Auth/VerifyEmail";
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
             </Route>
           </Route>
           <Route path="/auth" element={<Auth />} />
+          <Route path="/confirm/:confirmationCode" element={<VerifyEmail />} />
         </Routes>
       </Router>
       <ToastContainer

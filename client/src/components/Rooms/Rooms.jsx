@@ -22,7 +22,7 @@ const Rooms = () => {
     <Container className="leftbar">
       <Paper className="leftbar__paper">
         <div style={{ height: "72vh" }}>
-          {isSuccess && data.length && (
+          {isSuccess && data.length ? (
             <ul className="list-group">
               {data.map((room) => (
                 <li key={room._id} className="list-group-item">
@@ -36,7 +36,7 @@ const Rooms = () => {
                           <GroupsIcon />
                         </ListItemIcon>
                         <ListItemText>
-                            <span className="fw-bold">{room.name}</span>
+                          <span className="fw-bold">{room.name}</span>
                         </ListItemText>
                       </ListItemButton>
                     }
@@ -44,9 +44,13 @@ const Rooms = () => {
                 </li>
               ))}
             </ul>
+          ) : (
+            <h3>No rooms</h3>
           )}
+
           {isError && <p>{error.message}</p>}
         </div>
+
         <div style={{ height: "10%" }}>
           <CreateRoomForm />
         </div>

@@ -35,11 +35,13 @@ const Navbar = () => {
               <CloseIcon className="icon__menu" />
             )}
           </IconButton>
-          <strong>VIA (Video Interaction Application)</strong>
-          <Typography sx={{ flexGrow: 1 }}></Typography>
+          <Typography sx={{ flexGrow: 1 }}>
+          <h2 style={{ fontFamily: "cursive" }}>
+            VIA
+          </h2>
+          </Typography>
           <div className="toolbar__div">
             <button className="bn6" onClick={logout}>
-
               Logout
             </button>
           </div>
