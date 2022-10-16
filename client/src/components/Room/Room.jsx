@@ -100,6 +100,8 @@ const Room = () => {
     <>
       {isSuccess && (
         <>
+        <div className="head">
+
           <AppBar color="transparent" elevation={1} position="static">
             <Toolbar>
               <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}>
@@ -185,6 +187,7 @@ const Room = () => {
               )}
             </Toolbar>
           </AppBar>
+        </div>
 
           <Dialog open={open} onClose={handleClose} maxWidth="sm" fullWidth>
             <DialogTitle>Add User:</DialogTitle>

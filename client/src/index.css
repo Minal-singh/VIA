@@ -83,3 +83,11 @@ button {
     width:100%;
   }
 }
+.head {
+  position: fixed; 
+   z-index: 1;
+   width: 70%;
+     height: 65px;
+     padding-bottom: 20px !important;
+     background-color: white;
+}
